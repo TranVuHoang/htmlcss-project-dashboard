@@ -1,0 +1,92 @@
+:root {
+  /* define all of color */
+  --mainColor: #f6f8fa;
+  --darkBlack: #2d2f3a;
+  --darkGrey: #61666b;
+  --grey: #dfdfdf;
+  --lightGrey: #f2f2f2;
+  --yellow: #fecb40;
+  --red: #df113c;
+}
+
+/* reset css */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 62.5%; */
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: var(--darkBlack);
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.label-cart {
+  position: fixed;
+  top: 15px;
+  right: 10px;
+  z-index: 4;
+  cursor: pointer;
+}
+
+.logo {
+  position: fixed;
+  top: 0;
+  background: var(--darkBlack);
+  color: var(--lightGrey);
+  width: 100%;
+  text-align: center;
+  padding: 15px 420px 15px 60px;
+  z-index: 2;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background: var(--mainColor);
+  z-index: 1;
+  padding-top: 70px;
+}
+
+.sidebar__menu {
+  width: 100%;
+  text-align: center;
+  padding: 10px 5px;
+  color: var(--darkGrey);
+  border-right: 2px solid transparent;
+  transition: 0.25s ease;
+}
+
+.sidebar__menu:hover {
+  border-right: 2px solid var(--yellow);
+}
+
+.sidebar__link {
+  text-decoration: none;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--darkGrey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease;
+}
+
+.sidebar__menu:hover .sidebar__link {
+  color: var(--yellow);
+}
