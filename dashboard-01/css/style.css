@@ -20,17 +20,26 @@
 }
 
 html {
-  /* font-size: 62.5%; */
+  font-size: 62.5%;
 }
 
 body {
   font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
   color: var(--darkBlack);
 }
 
 p {
   font-size: 1.4rem;
 }
+
+a {
+  text-decoration: none;
+}
+
+/*--------------------------------------------
+# Navbar menu styling
+--------------------------------------------*/
 
 .label-cart {
   position: fixed;
@@ -55,7 +64,7 @@ p {
   position: fixed;
   left: 0;
   top: 0;
-  width: 50px;
+  width: 100px;
   height: 100%;
   background: var(--mainColor);
   z-index: 1;
@@ -76,8 +85,8 @@ p {
 }
 
 .sidebar__link {
+  font-size: 1.5rem;
   text-decoration: none;
-  font-size: 0.7rem;
   line-height: 1.5;
   color: var(--darkGrey);
   display: flex;
@@ -89,4 +98,123 @@ p {
 
 .sidebar__menu:hover .sidebar__link {
   color: var(--yellow);
+}
+
+/*--------------------------------------------
+# dashboard main styling
+--------------------------------------------*/
+.dashboard {
+  width: 100%;
+  height: 100%;
+  padding-right: 36rem;
+  padding-left: 6rem;
+  margin-left: 50px;
+}
+
+.dashboard__banner {
+  margin-top: 4rem;
+  padding: 1rem;
+  width: 100%;
+  height: 300px;
+  position: relative;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.dashboard__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.dashboard__promo {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  font-weight: 800;
+  color: var(--lightGrey);
+}
+.dashboard__promo-title {
+  font-size: 3rem;
+}
+
+.dashboard__sale {
+  color: var(--yellow);
+}
+
+.dashboard__title {
+  padding: 0 1rem;
+  font-size: 3rem;
+}
+
+.dashboard__menu {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.3rem 1rem;
+  overflow-x: auto;
+}
+
+.dashboard__link {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 2rem;
+  min-width: 120px;
+  padding: 1rem 0;
+  font-size: 1.9rem;
+  color: var(--darkGrey);
+  background: var(--lightGrey);
+  transition: 0.25s ease;
+}
+
+.dashboard__link:hover {
+  background: var(--red);
+  color: var(--lightGrey);
+}
+
+.dashboard__content {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.dashboard__card {
+  background: var(--mainColor);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.25s ease;
+}
+
+.dashboard__card:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dashboard__card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.dashboard__card-detail {
+  padding: 40px;
+}
+
+.dashboard__card-title span {
+  float: right;
+  font-weight: bold;
+}
+
+.dashboard__card-time {
+  color: var(--darkGrey);
+  font-size: 1.5rem;
+  margin-top: 10px;
 }
